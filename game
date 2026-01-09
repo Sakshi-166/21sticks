@@ -1,0 +1,59 @@
+PSEUDO CODE 
+*** ALGORITHM : Two_Player_21_Sticks_Game
+SET sticks ← 21
+SET player ← 1
+DISPLAY "21 Sticks Game"
+DISPLAY "Rules:"
+DISPLAY "Each player can pick 1 to 4 sticks"
+DISPLAY "Whoever picks the last stick loses"
+WHILE sticks > 0 DO
+        DISPLAY "Sticks remaining =", sticks
+        DISPLAY "Player", player, "turn"
+        INPUT pick
+        WHILE pick < 1 OR pick > 4 OR pick > sticks DO
+            DISPLAY "Invalid choice! Pick between 1 and 4 sticks"
+            INPUT pick
+        END WHILE
+        sticks ← sticks − pick
+        IF sticks = 0 THEN
+            DISPLAY "Player", player, "picked the last stick"
+            DISPLAY "Player", (3 − player), "WINS"
+            STOP
+        END IF
+        IF player=1 THEN
+          player=2
+        ELSE
+          player=1
+        END IF
+END WHILE***
+
+CODE 
+
+ def two_player_sticks():
+    sticks = 21
+    player = 1
+
+    print("🎮 21 Sticks Game – 2 Player Mode")
+    print("Rules:")
+    print("- Pick 1 to 4 sticks")
+    print("- Whoever picks the last stick loses\n")
+
+    while (sticks > 0):
+        print(f"Sticks remaining: {sticks}")
+        print(f"Player {player}'s turn")
+
+        pick = int(input("Pick 1 to 4 sticks: "))
+        while pick < 1 or pick > 4 or pick > sticks:
+            pick = int(input("Invalid choice! Pick between 1 and 4: "))
+
+        sticks -= pick
+
+        if sticks == 0:
+            print(f"❌ Player {player} picked the last stick.")
+            print(f"🏆 Player {2 if player == 1 else 1} WINS!")
+            break
+
+        player = 2 if player == 1 else 1
+        print("-" * 30)
+
+two_player_sticks() 
