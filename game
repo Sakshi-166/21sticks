@@ -33,7 +33,7 @@ CODE
     sticks = 21
     player = 1
 
-    print("🎮 21 Sticks Game – 2 Player Mode")
+    print(" 21 Sticks Game – 2 Player Mode")
     print("Rules:")
     print("- Pick 1 to 4 sticks")
     print("- Whoever picks the last stick loses\n")
@@ -54,6 +54,6 @@ CODE
             break
 
         player = 2 if player == 1 else 1
-        print("-" * 30)
+        print("-" * 10)
 
 two_player() 
