@@ -29,7 +29,7 @@ END WHILE***
 
 CODE 
 
- def two_player_sticks():
+ def two_player():
     sticks = 21
     player = 1
 
@@ -56,4 +56,4 @@ CODE
         player = 2 if player == 1 else 1
         print("-" * 30)
 
-two_player_sticks() 
+two_player() 
