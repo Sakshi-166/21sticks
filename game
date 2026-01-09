@@ -1,5 +1,5 @@
 PSEUDO CODE 
-*** ALGORITHM : Two_Player_21_Sticks_Game
+***  Two_Player_21_Sticks
 SET sticks ← 21
 SET player ← 1
 DISPLAY "21 Sticks Game"
